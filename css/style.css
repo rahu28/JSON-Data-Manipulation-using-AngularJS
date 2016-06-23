@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,300);
+
+body{
+    font-family: 'Raleway', sans-serif;
+    transition: all 3s ease;
+    opacity: 0;
+}
+.image{
+    float: left;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.list{
+    clear: left;
+    min-height: 200px;
+    margin: 20px;
+    transition: background-color .5s ease ;
+    padding: 20px;
+    border-radius: 10px;
+}
+.search{
+    margin: 0 auto;
+    position: relative;
+    top: 0%;
+    left: 45%;
+}
+.friends{
+    clear: both;
+}
+.greeting{
+    box-shadow:inset 0px 1px 1px 1px #e0e0e0 ;
+    padding: 15px;
+}
+.email{
+    margin-top: 15px;
+}
+.loaded{
+    opacity: 1;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <title>Angular JS by Rahul J Rajput</title>
+</head>
+<body ng-app="myApp" onload="loaded(document.body)">
+    <div ng-controller="MyController" class="container">
+        <input class="search" type="search" ng-model="query">
+        <div ng-repeat="item in writers | filter: query " class="list">
+           <div class="box">
+                <h1 class="name">{{ item.name }} ({{ item.balance }})</h1>
+                <img ng-src="{{ item.picture }}" class="image">
+                <p class="about">{{ item.about }}</p>
+           </div>
+            <div class="friends">
+                <h2>Friends:</h2>
+                <div ng-repeat="friend in item.friends">
+                    <p>{{ friend.id + 1}}.  {{ friend.name }}</p>
+                </div>
+            </div>
+            <div class="greeting">{{ item.greeting }}</div>
+            <div class="email">
+                <label>Email: </label>
+                <a class="email" href="mailto:{{ item.email }}?Subject=Re:%20AngularJs" target="_top">{{ item.email }}</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
